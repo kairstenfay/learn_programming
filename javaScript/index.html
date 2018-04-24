@@ -52,7 +52,6 @@
 					})
 
 					var padding = 30; // keeps labels from being cut off 
-					var w = 600;
 					var h = 400;
 
 					// setting up dynamic scales
@@ -66,7 +65,7 @@
 										 .range([h - padding, padding]); // otherwise larger y-values are at the bottom
 
 
-					var rScale = d3.scale.linåear()
+					var rScale = d3.scale.linear()
 										 .domain([0, d3.max(dataset, function(d) { return d[1]; })])
 										 .range([2, 5]);
 					// setting up axes
