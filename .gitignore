@@ -5,4 +5,4 @@
 *.svg
 *.tsv
 *.csv
-
+.idea/*

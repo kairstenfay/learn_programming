@@ -47,11 +47,8 @@ class Stack {
   }
   set maxSize(aSize) {
     this._maxSize = aSize;
-    if (this._list.length > this._maxSize) {
-      throw new RangeError(`You have exceeded the stack limit of ${this._maxSize}!`);
-    } else {
-      return this._maxSize;
-    }
+    this._checkSize();
+    return this._maxSize;
   }
   pop () { // TODO: test to make sure length is one less than before
     // removes the top item from the stack and returns the new stack
@@ -67,12 +64,8 @@ class Stack {
     // adds an item to the top of the stack
     this._list.push(newItem);
     this._updateBalance();
-
-    if (this._list.length > this._maxSize) {
-      throw new RangeError(`You have exceeded the stack limit of ${this._maxSize}!`);
-    } else {
-      return this._list;
-    }
+    this._checkSize();
+    return this._list;
   }
   peek () {
     // makes a copy of the top item in the stack
@@ -127,13 +120,11 @@ class Stack {
       return 'You are balanced.';
     }
    }
-
-/*  static pickSubstituteTeacher(substituteTeachers) {
-    const rand = Math.floor(Math.random() * substituteTeachers.length);
-    return substituteTeachers[rand];
-  }
-  */
-
+   _checkSize () {
+     if (this._list.length > this._maxSize) {
+       throw new RangeError(`You have exceeded the stack limit of ${this._maxSize}!`);
+    }
+   }
 }
 
 // const list = [1,2,3];
@@ -174,6 +165,7 @@ console.log(test3.checkBalance());
 test3.pop();
 console.log(test3.checkBalance());
 console.log(test3);
+// test3.maxSize = 1;
 console.log('\n\n');
 
 let test4 = new Stack();
