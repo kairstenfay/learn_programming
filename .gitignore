@@ -1,2 +1,8 @@
 *.class
 *homework/
+*.xml
+*.iml
+*.svg
+*.tsv
+*.csv
+
