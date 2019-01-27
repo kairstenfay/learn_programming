@@ -31,20 +31,15 @@ class Stack {
   constructor(maxSize=10) {
     this._list = [];
     this._maxSize = maxSize;
-    this._curlyBalance = 0;
-    this._squareBalance = 0;
-    this._curvyBalance = 0;
-  }
-  get list () {
-    return this._list;
   }
   set list(someArray) {
-    this._updateBalance();
     return this._list = someArray;
   }
-  get maxSize () {
-    return this._maxSize;
+
+  get length() {
+    return this._list.length;
   }
+
   set maxSize(aSize) {
     this._maxSize = aSize;
     this._checkSize();
@@ -56,14 +51,17 @@ class Stack {
       throw new RangeError('There is nothing left to pop!');
     } else {
       this._list.pop();
-      this._updateBalance();
       return this._list;
     }
   }
+
+  grab (index) {
+    return this._list[index];
+  }
+
   push (newItem) {
     // adds an item to the top of the stack
     this._list.push(newItem);
-    this._updateBalance();
     this._checkSize();
     return this._list;
   }
@@ -75,51 +73,6 @@ class Stack {
       return this._list[this._list.length - 1];
     }
   }
-  _updateBalance () {
-    // updates the balance by resetting it then checking for matches to the parentheses using a nested for loop
-    this._curlyBalance = 0;
-    this._curvyBalance = 0;
-    this._squareBalance = 0;
-
-    for (let i = 0; i < this._list.length; i++) {
-      for (let j = 0; j < this._list[i].length; j++) {
-        switch(this._list[i][j]) {
-          case '{':
-            this._curlyBalance++;
-            break;
-
-          case '(':
-            this._curvyBalance++;
-            break;
-
-          case '[':
-            this._squareBalance++;
-            break;
-
-          case '}':
-            this._curlyBalance--;
-            break;
-
-          case ')':
-            this._curvyBalance--;
-            break;
-
-          case ']':
-            this._squareBalance--;
-            break;
-        }
-      }
-    }
-  }
-   checkBalance () {
-    this._updateBalance();
-    if (this._curvyBalance !== 0 || this._curlyBalance !== 0 || this._squareBalance !== 0) {
-      // throw new SyntaxError('Your parentheses are not balanced!');
-      return "Your parentheses are not balanced!"
-    } else {
-      return 'You are balanced.';
-    }
-   }
    _checkSize () {
      if (this._list.length > this._maxSize) {
        throw new RangeError(`You have exceeded the stack limit of ${this._maxSize}!`);
@@ -127,29 +80,57 @@ class Stack {
    }
 }
 
-// const list = [1,2,3];
-//
-// let test = new Stack();
-// test.list = list;
-// console.log(test.list);
-// test.pop();
-// console.log(test.list);
-//
-// const list2 = [1,2,3,4,5];
-// let test2 = new Stack();
-// test.list = list2
-//
-// console.log(test2);
-// test2.maxSize = 99;
-// console.log(test2.list);
-// console.log(test2.maxSize);
-// // console.log(test2.push(6));
-// // test2.maxSize = 4;
-//
-// const temp = test2.peek();
-// console.log(temp); // makes a copy
-// console.log(test2.list);
 
+function _updateBalance(stack) {
+    let balance = {
+      // updates the balance by resetting it then checking for matches to the parentheses using a nested for loop
+      curlyBalance: 0,
+      curvyBalance: 0,
+      squareBalance: 0
+    };
+
+    for (let i = 0; i < stack.length; i++) {
+        for (let j = 0; j < stack.grab(i).length; j++) {
+            switch(stack.grab([i])[j]) {
+                case '{':
+                    balance.curlyBalance++;
+                    break;
+
+                case '(':
+                    balance.curvyBalance++;
+                    break;
+
+                case '[':
+                    balance.squareBalance++;
+                    break;
+
+                case '}':
+                    balance.curlyBalance--;
+                    break;
+
+                case ')':
+                    balance.curvyBalance--;
+                    break;
+
+                case ']':
+                    balance.squareBalance--;
+                    break;
+            }
+        }
+    }
+
+    return balance;
+}
+
+function checkBalance (stack, balance) {
+    balance = _updateBalance(stack);
+    if (balance.curvyBalance !== 0 || balance.curlyBalance !== 0 || balance.squareBalance !== 0) {
+        // throw new SyntaxError('Your parentheses are not balanced!');
+        return "Your parentheses are not balanced!"
+    } else {
+        return 'You are balanced.';
+    }
+}
 
 let test3 = new Stack();
 // test3.peek();
@@ -161,9 +142,11 @@ test3.push('}(');
 test3.push('(');
 test3.push('}');
 console.log(test3);
-console.log(test3.checkBalance());
+console.log(test3.length);
+console.log(_updateBalance(test3));
+console.log(checkBalance(test3));
 test3.pop();
-console.log(test3.checkBalance());
+console.log(checkBalance(test3));
 console.log(test3);
 // test3.maxSize = 1;
 console.log('\n\n');
@@ -171,26 +154,26 @@ console.log('\n\n');
 let test4 = new Stack();
 test4.push('A curly eyebrow emoticon is drawn like this: }:)                {(');
 console.log(test4);
-console.log(test4.checkBalance());
+console.log(checkBalance(test4));
 
 console.log('\n\n');
 
-// todo: update balance when updating list or creating instance of new Stack with list passed in
-// I removed the `list` argument from the constructor so that every new instance starts
-// with an empty stack
-
-
-console.log('Todo?');
-let newList = ['}{{{}(('];
-let test5 = new Stack();
-test5.list = newList;
-// console.log(test5); // does not reflect balance
+// // todo: update balance when updating list or creating instance of new Stack with list passed in
+// // I removed the `list` argument from the constructor so that every new instance starts
+// // with an empty stack
+//
+//
+// console.log('Todo?');
+// let newList = ['}{{{}(('];
+// let test5 = new Stack();
 // test5.list = newList;
-console.log(test5); // using the setter does
-console.log(test5.checkBalance());
-console.log(test5);
-console.log(test5.peek());
-
-
-// todo: add tests to make sure that the balances are correct
+// // console.log(test5); // does not reflect balance
+// // test5.list = newList;
+// console.log(test5); // using the setter does
+// console.log(checkBalance(test5));
+// console.log(test5);
+// console.log(test5.peek());
+//
+//
+// // todo: add tests to make sure that the balances are correct
 // todo: make sure checkBalance works
