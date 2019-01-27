@@ -1,0 +1,2439 @@
+
+
+
+<!DOCTYPE html>
+<html>
+<!-- This file and all linked documents are, unless otherwise specified, authored by Marty Stepp, and may not be copied, redistributed, or modified without his permission. -->
+	<head>
+		<meta charset="utf-8" />
+		<meta name="description" content="Practice-It is an online practice problem tool to help students in college and high school intro programming courses learn and practice basic CS1 and CS2 programming concepts." />
+		<meta name="keywords" content="code step by step, CodeStepByStep, Java, C++, Python, practice, code, programming, CS1, CS2, back to basics, procedural programming, objects late, marty stepp, DrawingPanel, college, university" />
+		<meta name="HandheldFriendly" content="true" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+		<meta http-equiv="Cache-Control" content="no-cache" />
+		<meta http-equiv="Pragma" content="no-cache" />
+		<meta http-equiv="Expires" content="0" />
+
+		<title>Timed Quiz Results - Practice-It</title>
+
+		
+		<link href="/css/style.css" type="text/css" rel="stylesheet" />
+		<link href="/css/mobile.css" type="text/css" rel="stylesheet" media="handheld, only screen" />
+		
+		<link href="/css/pit.css" type="text/css" rel="stylesheet" />
+		<link href="/css/pit-mobile.css" type="text/css" rel="stylesheet" media="handheld, only screen" />
+
+		<link href="/css/font-awesome.css" type="text/css" rel="stylesheet" />
+		<link href="/css/font-mfizz.css" type="text/css" rel="stylesheet" />
+		<link href="/css/jquery-ui.min.css" type="text/css" rel="stylesheet" />
+		<link href="/images/favicon.gif" type="image/gif" rel="shortcut icon" />
+
+		<script src="/js/jQuery/jquery-2.2.3.min.js" type="text/javascript"></script>
+		<script src="/js/jQuery/jquery-ui.min.js" type="text/javascript"></script>
+		<script src="/js/jQuery/jquery.form.min.js" type="text/javascript"></script>
+		<script src="/js/jQuery/jquery.ion.sound.min.js" type="text/javascript"></script>
+
+		
+			<script src="/js/advertisement.js" type="text/javascript"></script>
+		
+		<script src="/js/common.js" type="text/javascript"></script>
+
+		
+			
+			<script>
+				(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+							(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+						m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+				})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+				ga('create', 'UA-78231907-2', 'auto');
+				ga('send', 'pageview');
+			</script>
+		
+	</head>
+
+	<body>
+		<header>
+			
+			
+
+			
+
+			<div class="maincontentarea overalllayoutalignblock">
+				
+					<form id="searchform" class="floatingsearchform" action="/problem/search" method="post">
+						<button id="searchbar-icon" type="button" class="emphasized">
+							<i class="fa fa-search-plus"></i>
+						</button>
+						<input id="searchbar" name="substring" type="text"
+								required="required"
+								placeholder="Search Problems"
+								title="Search Problems" />
+					</form>
+				
+				<a class="root-link" href="/">
+					<h1 class="overalllayoutaligntext">
+						<img src="/images/app-cartoony-logo-h60.png" class="logoimage" alt="logo" />
+						<span>Practice-It</span>
+						<img src="/images/app-cartoony-logo-h60.png" class="logoimage" alt="logo" />
+					</h1>
+				</a>
+			</div>
+		</header>
+
+		
+		<div id="foldermetadata" style="display: none;">
+			<div id="CSS_FOLDER">/css/</div>
+			<div id="IMAGES_FOLDER">/images/</div>
+			<div id="JS_FOLDER">/js/</div>
+			<div id="SOUNDS_FOLDER">/sounds/</div>
+		</div>
+
+		<div id="topmessagesarea" class="overalllayoutalignblock">
+			<noscript>
+				<p class="error">
+					This site requires JavaScript.
+					It looks like you have disabled JavaScript in your browser or are using a browser that does not support JavaScript.
+					Please enable it or try another browser.
+				</p>
+			</noscript>
+
+			<div id="adblockoverlay" style="display: none;">
+				<h2>Ad Blocker Detected</h2>
+
+				<p>
+					You must disable your ad-blocking software for our web site in your browser to use this site.
+					You don't have to turn off the ad blocker entirely; just disable ad blocking for <strong>codestepbystep.com</strong>, then refresh this page to continue.
+				</p>
+
+				<p>
+					It is easy to disable a tool like AdBlock for just one site while leaving it enabled for other sites.
+					Just click the "<strong>stop sign</strong>" icon in the top-right of your browser, then un-check the "<strong>Enabled for this site</strong>" checkbox.
+					If your UI doesn't match the screenshot below, you may want to Google for how to add a "whitelisted domain" to your ad blocker to allow ads from <strong>codestepbystep.com</strong> to be shown.
+				</p>
+
+				<p>
+					<img src="/images/adblock-disable.png" alt="AdBlock disable screenshot" />
+				</p>
+
+				<p>
+					Thank you for your understanding and helping us to keep this service free of cost for all students to use.
+				</p>
+
+				<p style="margin-top: 3em">
+					<em>Note:</em> If you are seeing this message but aren't running an ad blocker or have disabled your ad blocker:
+				</p>
+				
+				<ul style="text-align: left">
+					<li>Try clearing your browser history and refreshing the page.
+					<li>Make sure you don't have any other ad-blocking software running outside of your browser, such as a HOSTS file or proxy.
+					<li>If you are using a school computer network:
+						Many high schools have "proxy" software that blocks ads at the entire school level.
+						Your school's system administrator may need to add an exception for codestepbystep.com to allow these ads to get through.
+						You may need to copy/paste this information to your school's network administrator so that he/she can make appropriate changes to your network settings.
+				</ul>
+
+				<p style="margin-top: 2em">
+					If you have questions or need any other assistance,
+					please <a href="/contact-us">Contact Us</a>.
+				</p>
+			</div>
+
+			
+		</div>
+
+		
+		
+			<div id="noad" style="display: none;"></div>
+		
+
+		<div id="mainbodyarea" class="overalllayoutalignblock">
+			<div id="loading" style="display: none">
+				<i class="fa fa-2x fa-spinner fa-spin"></i>
+				Loading...
+			</div>
+
+			<div id="mainbodyareabody" class="overalllayoutalignblock">
+				
+ 
+
+
+
+
+
+<div id="userinfoarea" class="unselectabletext">
+	<div id="userimagearea" onclick="Page.loginStatusToggle();" title="Click here to show/hide a panel of actions related to your account.">
+		<span class="usertext">
+			<span class="username">kafay</span>
+			<span class="usertype" style="display: none">student</span>
+		</span>
+		<i class="fa fa-2x fa-user" style="vertical-align: middle;"></i>
+	</div>
+	<div id="loginsolvedstatus" style="display: none">2</div>
+</div>
+
+	<div id="useractionsarea" style="display: none;">
+		<div id="useractionsbesideslogout">
+			
+			
+			<div>
+				<a id="edituserinfolink" class="" href="/user/index" title="Basic personal information in your account">
+					<i class="fa fa-fw fa-user"></i>
+					My Account</a>
+			</div>
+			
+			
+			
+			
+			
+			<div>
+				<a class="" href="/user/problems-solved" title="Lists all of the problems you have solved">
+					<i class="fa fa-fw fa-book"></i>
+					Problems Solved</a>
+				<!--
+				
+					(<span id="usertotalsolved">2</span>)
+				
+				-->
+			</div>
+
+			<div>
+				<a id="logoutlink" class="" href="/logout" style="margin-top: 1em" title="Log out of your account">
+					<i class="fa fa-fw fa-sign-out"></i>
+					Log Out</a>
+			</div>
+		</div>
+	</div>
+
+
+
+<div class="timedquizresultsarea">
+	<h2 class="breadcrumbs overalllayoutaligntext">
+		<a href="/">Main Page</a>
+		&rarr;
+		<a href="/problem/list">Problems</a>
+		&rarr;
+		<span class="currentpagecrumb">Timed Quiz Results</span>
+	</h2>
+	
+	<h2>Results for Practice Final 13 (11au)</h2>
+
+	<div id="timetakenarea">
+		<div>
+			<span class="columnname">Start time:</span> 
+			2018/06/01 03:53:56 (UTC) 
+		</div>
+		<div>
+			<span class="columnname">End time:</span> 
+			2018/06/01 05:35:17 (UTC) 
+		</div>
+		<div>
+			<span class="columnname">Elapsed:</span> 
+			1 hours and 42 min 
+		</div>
+	</div>
+</div>
+
+<div id="timedquizresultsproblemsarea">
+
+	
+		<div class="timedquizproblem">
+			<div class="timedquizresultsarea">
+				<h3>
+					<a href="/problem/view/cs1/exams/finals/final13/arrayMystery"
+							title="Click here to re-open this problem to work on it again.">
+						
+						arrayMystery</a>
+					
+					
+						<a class="hidedescription buttonlink" title="show/hide description text">
+							<img src="/images/hide.gif" title="show/hide results" alt="show results" style="vertical-align: middle" />
+							Show/Hide</a>
+					
+				</h3>
+
+				<div class="studentsolution">
+					
+						<p style="overflow: hidden">
+							<span class="columnname">Submitted:</span>
+							2018/05/31 21:01:26 (UTC)
+						</p>
+					
+
+					
+
+					
+
+					
+						<p class="warning">
+							NOTE: You had already solved this problem prior to starting this quiz.
+						</p>
+					
+				</div>
+			</div>
+			
+			<div class="timedquizproblembody">
+				
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<p id="passcountmessage">
+		<span id="passcountmessagespan" class="didnotpassall">
+			<i class="fa fa-dot-circle-o attempted-icon"></i>
+			<strong>You passed 3 of 5 tests.</strong>
+	
+			Try again.
+		</span>
+	</p>
+	
+
+
+ 
+
+
+	
+	
+		
+		
+		
+		
+		
+			<table id="testresults">
+				<tr>
+					<th>#</th>
+					<th>question</th>
+					
+						<th>expected answer</th>
+					
+					<th>your answer</th>
+					<th>result</th>
+				</tr>
+		
+			
+		
+			
+			
+				<tr class="pass">
+					<th>
+						1
+					</th>
+					
+					<td>
+						<code class="expressionquestiontext">int[] a1 = {1, 1, 3};
+arrayMystery(a1);</code>
+					</td>
+					
+					
+						<td>
+							<code>{1,&nbsp;2,&nbsp;3}</code>
+						</td>
+					
+					
+					<td>
+						<code>
+						{1,&nbsp;2,&nbsp;3}
+						</code>
+					</td>
+					
+					<td>
+						<i class="fa fa-check-circle-o pass-icon"></i>
+						pass
+					</td>
+				</tr>
+				
+			
+		
+			
+			
+				<tr class="pass">
+					<th>
+						2
+					</th>
+					
+					<td>
+						<code class="expressionquestiontext">int[] a2 = {2, 1, 2, 4};
+arrayMystery(a2);</code>
+					</td>
+					
+					
+						<td>
+							<code>{2,&nbsp;2,&nbsp;3,&nbsp;4}</code>
+						</td>
+					
+					
+					<td>
+						<code>
+						{2,&nbsp;2,&nbsp;3,&nbsp;4}
+						</code>
+					</td>
+					
+					<td>
+						<i class="fa fa-check-circle-o pass-icon"></i>
+						pass
+					</td>
+				</tr>
+				
+			
+		
+			
+			
+				<tr class="fail">
+					<th>
+						3
+					</th>
+					
+					<td>
+						<code class="expressionquestiontext">int[] a3 = {6, 13, 0, 3, 7};
+arrayMystery(a3);</code>
+					</td>
+					
+					
+						<td>
+							<code>{6,&nbsp;3,&nbsp;3,&nbsp;5,&nbsp;7}</code>
+						</td>
+					
+					
+					<td>
+						<code>
+						{6,&nbsp;3,&nbsp;2,&nbsp;4,&nbsp;7}
+						</code>
+					</td>
+					
+					<td>
+						<i class="fa fa-times-circle-o fail-icon"></i>
+						fail
+					</td>
+				</tr>
+				
+			
+		
+			
+			
+				<tr class="pass">
+					<th>
+						4
+					</th>
+					
+					<td>
+						<code class="expressionquestiontext">int[] a4 = {-1, 6, 3, 5, -3};
+arrayMystery(a4);</code>
+					</td>
+					
+					
+						<td>
+							<code>{-1,&nbsp;1,&nbsp;3,&nbsp;0,&nbsp;-3}</code>
+						</td>
+					
+					
+					<td>
+						<code>
+						{-1,&nbsp;1,&nbsp;3,&nbsp;0,&nbsp;-3}
+						</code>
+					</td>
+					
+					<td>
+						<i class="fa fa-check-circle-o pass-icon"></i>
+						pass
+					</td>
+				</tr>
+				
+			
+		
+			
+			
+				<tr class="fail">
+					<th>
+						5
+					</th>
+					
+					<td>
+						<code class="expressionquestiontext">int[] a5 = {7, 2, 3, 1, -3, 12};
+arrayMystery(a5);</code>
+					</td>
+					
+					
+						<td>
+							<code>{7,&nbsp;5,&nbsp;3,&nbsp;0,&nbsp;6,&nbsp;12}</code>
+						</td>
+					
+					
+					<td>
+						<code>
+						{7,&nbsp;5,&nbsp;3,&nbsp;0,&nbsp;6}
+						</code>
+					</td>
+					
+					<td>
+						<i class="fa fa-times-circle-o fail-icon"></i>
+						fail
+					</td>
+				</tr>
+				
+			
+		
+		
+		
+			</table>
+		
+	 
+ 
+
+
+
+
+
+
+
+			</div>
+		</div>
+		<hr />
+	
+		<div class="timedquizproblem">
+			<div class="timedquizresultsarea">
+				<h3>
+					<a href="/problem/view/cs1/exams/finals/final13/referenceMystery"
+							title="Click here to re-open this problem to work on it again.">
+						
+						referenceMystery</a>
+					
+					
+						<a class="hidedescription buttonlink" title="show/hide description text">
+							<img src="/images/hide.gif" title="show/hide results" alt="show results" style="vertical-align: middle" />
+							Show/Hide</a>
+					
+				</h3>
+
+				<div class="studentsolution">
+					
+						<p style="overflow: hidden">
+							<span class="columnname">Submitted:</span>
+							2018/05/31 21:05:48 (UTC)
+						</p>
+					
+
+					
+
+					
+
+					
+						<p class="warning">
+							NOTE: You had already solved this problem prior to starting this quiz.
+						</p>
+					
+				</div>
+			</div>
+			
+			<div class="timedquizproblembody">
+				
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<p id="passcountmessage">
+		<span id="passcountmessagespan" class="didnotpassall">
+			<i class="fa fa-times-circle-o fail-icon"></i>
+			<strong>You passed 0 of 4 tests.</strong>
+	
+			Try again.
+		</span>
+	</p>
+	
+
+
+ 
+
+
+	
+	
+		
+		
+		
+		
+		
+			<table id="testresults">
+				<tr>
+					<th>#</th>
+					<th>question</th>
+					
+						<th>expected answer</th>
+					
+					<th>your answer</th>
+					<th>result</th>
+				</tr>
+		
+			
+		
+			
+			
+				<tr class="fail">
+					<th>
+						1
+					</th>
+					
+					<td>
+						<code class="expressionquestiontext">line 1</code>
+					</td>
+					
+					
+						<td>
+							<code>Susan,&nbsp;30,&nbsp;Janet:&nbsp;$31</code>
+						</td>
+					
+					
+					<td>
+						<code>
+						Susan,&nbsp;30,&nbsp;Janet:&nbsp;31
+						</code>
+					</td>
+					
+					<td>
+						<i class="fa fa-times-circle-o fail-icon"></i>
+						fail
+					</td>
+				</tr>
+				
+			
+		
+			
+			
+				<tr class="fail">
+					<th>
+						2
+					</th>
+					
+					<td>
+						<code class="expressionquestiontext">line 2</code>
+					</td>
+					
+					
+						<td>
+							<code>Janet,&nbsp;30,&nbsp;Janet:&nbsp;$31</code>
+						</td>
+					
+					
+					<td>
+						<code>
+						Janet,&nbsp;30,&nbsp;Janet:&nbsp;31
+						</code>
+					</td>
+					
+					<td>
+						<i class="fa fa-times-circle-o fail-icon"></i>
+						fail
+					</td>
+				</tr>
+				
+			
+		
+			
+			
+				<tr class="fail">
+					<th>
+						3
+					</th>
+					
+					<td>
+						<code class="expressionquestiontext">line 3</code>
+					</td>
+					
+					
+						<td>
+							<code>Susan,&nbsp;40,&nbsp;Billy:&nbsp;$32</code>
+						</td>
+					
+					
+					<td>
+						<code>
+						Susan,&nbsp;40,&nbsp;Billy:&nbsp;41
+						</code>
+					</td>
+					
+					<td>
+						<i class="fa fa-times-circle-o fail-icon"></i>
+						fail
+					</td>
+				</tr>
+				
+			
+		
+			
+			
+				<tr class="fail">
+					<th>
+						4
+					</th>
+					
+					<td>
+						<code class="expressionquestiontext">line 4</code>
+					</td>
+					
+					
+						<td>
+							<code>Janet,&nbsp;40,&nbsp;Billy:&nbsp;$32</code>
+						</td>
+					
+					
+					<td>
+						<code>
+						Janet,&nbsp;40,&nbsp;Billy:&nbsp;41
+						</code>
+					</td>
+					
+					<td>
+						<i class="fa fa-times-circle-o fail-icon"></i>
+						fail
+					</td>
+				</tr>
+				
+			
+		
+		
+		
+			</table>
+		
+	 
+ 
+
+
+
+
+
+
+
+			</div>
+		</div>
+		<hr />
+	
+		<div class="timedquizproblem">
+			<div class="timedquizresultsarea">
+				<h3>
+					<a href="/problem/view/cs1/exams/finals/final13/inheritanceMystery"
+							title="Click here to re-open this problem to work on it again.">
+						
+						inheritanceMystery</a>
+					
+					
+						<a class="hidedescription buttonlink" title="show/hide description text">
+							<img src="/images/hide.gif" title="show/hide results" alt="show results" style="vertical-align: middle" />
+							Show/Hide</a>
+					
+				</h3>
+
+				<div class="studentsolution">
+					
+						<p style="overflow: hidden">
+							<span class="columnname">Submitted:</span>
+							2018/05/31 21:12:36 (UTC)
+						</p>
+					
+
+					
+
+					
+
+					
+						<p class="warning">
+							NOTE: You had already solved this problem prior to starting this quiz.
+						</p>
+					
+				</div>
+			</div>
+			
+			<div class="timedquizproblembody">
+				
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<p id="passcountmessage">
+		<span id="passcountmessagespan" class="passedall">
+			<i class="fa fa-check-circle-o pass-icon"></i>
+			<strong>You passed 4 of 4 tests.</strong>
+	
+		
+			<p><a href="/problem/view/cs1/exams/finals/final13/groceries">Go to the next problem: groceries</a></p>
+		
+	
+
+
+ 
+
+
+	
+	
+		
+		
+		
+		
+		
+			<table id="testresults">
+				<tr>
+					<th>#</th>
+					<th>question</th>
+					
+						<th>expected answer</th>
+					
+					<th>your answer</th>
+					<th>result</th>
+				</tr>
+		
+			
+		
+			
+			
+				<tr class="pass">
+					<th>
+						1
+					</th>
+					
+					<td>
+						<code class="expressionquestiontext">elements[0]: Tulip</code>
+					</td>
+					
+					
+						<td>
+							<code>Rose&nbsp;Lily<br/>
+Tulip&nbsp;1&nbsp;<br/>
+Lily&nbsp;2&nbsp;Tulip&nbsp;1</code>
+						</td>
+					
+					
+					<td>
+						<code>
+						Rose&nbsp;Lily<br/>
+Tulip&nbsp;1<br/>
+Lily&nbsp;2&nbsp;Tulip&nbsp;1&nbsp;<br/>
+
+						</code>
+					</td>
+					
+					<td>
+						<i class="fa fa-check-circle-o pass-icon"></i>
+						pass
+					</td>
+				</tr>
+				
+			
+		
+			
+			
+				<tr class="pass">
+					<th>
+						2
+					</th>
+					
+					<td>
+						<code class="expressionquestiontext">elements[1]: Lily</code>
+					</td>
+					
+					
+						<td>
+							<code>Lily<br/>
+Violet&nbsp;1&nbsp;Lily&nbsp;1&nbsp;<br/>
+Lily&nbsp;2&nbsp;Violet&nbsp;1&nbsp;Lily&nbsp;1</code>
+						</td>
+					
+					
+					<td>
+						<code>
+						Lily<br/>
+Violet&nbsp;1&nbsp;Lily&nbsp;1<br/>
+Lily&nbsp;2&nbsp;Violet&nbsp;1&nbsp;Lily&nbsp;1<br/>
+
+						</code>
+					</td>
+					
+					<td>
+						<i class="fa fa-check-circle-o pass-icon"></i>
+						pass
+					</td>
+				</tr>
+				
+			
+		
+			
+			
+				<tr class="pass">
+					<th>
+						3
+					</th>
+					
+					<td>
+						<code class="expressionquestiontext">elements[2]: Violet</code>
+					</td>
+					
+					
+						<td>
+							<code>Violet<br/>
+Violet&nbsp;1&nbsp;<br/>
+Violet&nbsp;2</code>
+						</td>
+					
+					
+					<td>
+						<code>
+						Violet<br/>
+Violet&nbsp;1<br/>
+Violet&nbsp;2<br/>
+
+						</code>
+					</td>
+					
+					<td>
+						<i class="fa fa-check-circle-o pass-icon"></i>
+						pass
+					</td>
+				</tr>
+				
+			
+		
+			
+			
+				<tr class="pass">
+					<th>
+						4
+					</th>
+					
+					<td>
+						<code class="expressionquestiontext">elements[3]: Rose</code>
+					</td>
+					
+					
+						<td>
+							<code>Rose&nbsp;Lily<br/>
+Violet&nbsp;1&nbsp;Lily&nbsp;1&nbsp;<br/>
+Lily&nbsp;2&nbsp;Violet&nbsp;1&nbsp;Lily&nbsp;1</code>
+						</td>
+					
+					
+					<td>
+						<code>
+						Rose&nbsp;Lily<br/>
+Violet&nbsp;1&nbsp;Lily&nbsp;1<br/>
+Lily&nbsp;2&nbsp;Violet&nbsp;1&nbsp;Lily&nbsp;1
+						</code>
+					</td>
+					
+					<td>
+						<i class="fa fa-check-circle-o pass-icon"></i>
+						pass
+					</td>
+				</tr>
+				
+			
+		
+		
+		
+			</table>
+		
+	 
+ 
+
+
+
+
+
+
+
+			</div>
+		</div>
+		<hr />
+	
+		<div class="timedquizproblem">
+			<div class="timedquizresultsarea">
+				<h3>
+					<a href="/problem/view/cs1/exams/finals/final13/groceries"
+							title="Click here to re-open this problem to work on it again.">
+						
+						groceries</a>
+					
+					
+						<a class="hidedescription buttonlink" title="show/hide description text">
+							<img src="/images/hide.gif" title="show/hide results" alt="show results" style="vertical-align: middle" />
+							Show/Hide</a>
+					
+				</h3>
+
+				<div class="studentsolution">
+					
+						<p style="overflow: hidden">
+							<span class="columnname">Submitted:</span>
+							2018/05/31 21:20:50 (UTC)
+						</p>
+					
+
+					
+
+					
+
+					
+						<p class="warning">
+							NOTE: You had already solved this problem prior to starting this quiz.
+						</p>
+					
+				</div>
+			</div>
+			
+			<div class="timedquizproblembody">
+				
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+	
+		<p class="error">
+			Error: Your code caused an error of type
+			<code>NumberFormatException</code>.
+		</p>
+
+		 
+	
+
+	
+	 
+ 
+
+ 
+
+
+
+
+
+
+
+			</div>
+		</div>
+		<hr />
+	
+		<div class="timedquizproblem">
+			<div class="timedquizresultsarea">
+				<h3>
+					<a href="/problem/view/cs1/exams/finals/final13/mostUnique"
+							title="Click here to re-open this problem to work on it again.">
+						
+						mostUnique</a>
+					
+					
+						<a class="hidedescription buttonlink" title="show/hide description text">
+							<img src="/images/hide.gif" title="show/hide results" alt="show results" style="vertical-align: middle" />
+							Show/Hide</a>
+					
+				</h3>
+
+				<div class="studentsolution">
+					
+						<p style="overflow: hidden">
+							<span class="columnname">Submitted:</span>
+							2018/05/31 21:36:21 (UTC)
+						</p>
+					
+
+					
+
+					
+
+					
+						<p class="warning">
+							NOTE: You had already solved this problem prior to starting this quiz.
+						</p>
+					
+				</div>
+			</div>
+			
+			<div class="timedquizproblembody">
+				
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+	
+		<p class="error">
+			Error: Your code caused an error of type
+			<code>NumberFormatException</code>.
+		</p>
+
+		 
+	
+
+	
+	 
+ 
+
+ 
+
+
+
+
+
+
+
+			</div>
+		</div>
+		<hr />
+	
+		<div class="timedquizproblem">
+			<div class="timedquizresultsarea">
+				<h3>
+					<a href="/problem/view/cs1/exams/finals/final13/repeatedSequence"
+							title="Click here to re-open this problem to work on it again.">
+						
+						repeatedSequence</a>
+					
+					
+						<a class="hidedescription buttonlink" title="show/hide description text">
+							<img src="/images/hide.gif" title="show/hide results" alt="show results" style="vertical-align: middle" />
+							Show/Hide</a>
+					
+				</h3>
+
+				<div class="studentsolution">
+					
+						<p style="overflow: hidden">
+							<span class="columnname">Submitted:</span>
+							2018/05/31 21:48:20 (UTC)
+						</p>
+					
+
+					
+
+					
+
+					
+						<p class="warning">
+							NOTE: You had already solved this problem prior to starting this quiz.
+						</p>
+					
+				</div>
+			</div>
+			
+			<div class="timedquizproblembody">
+				
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+	
+		<p class="error">
+			Error: Your code caused an error of type
+			<code>NumberFormatException</code>.
+		</p>
+
+		 
+	
+
+	
+	 
+ 
+
+ 
+
+
+
+
+
+
+
+			</div>
+		</div>
+		<hr />
+	
+		<div class="timedquizproblem">
+			<div class="timedquizresultsarea">
+				<h3>
+					<a href="/problem/view/cs1/exams/finals/final13/evenOdd"
+							title="Click here to re-open this problem to work on it again.">
+						
+						evenOdd</a>
+					
+					
+						<a class="hidedescription buttonlink" title="show/hide description text">
+							<img src="/images/hide.gif" title="show/hide results" alt="show results" style="vertical-align: middle" />
+							Show/Hide</a>
+					
+				</h3>
+
+				<div class="studentsolution">
+					
+						<p style="overflow: hidden">
+							<span class="columnname">Submitted:</span>
+							2018/05/31 22:05:08 (UTC)
+						</p>
+					
+
+					
+
+					
+
+					
+						<p class="warning">
+							NOTE: You had already solved this problem prior to starting this quiz.
+						</p>
+					
+				</div>
+			</div>
+			
+			<div class="timedquizproblembody">
+				
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<p id="passcountmessage">
+		<span id="passcountmessagespan" class="passedall">
+			<i class="fa fa-check-circle-o pass-icon"></i>
+			<strong>You passed 5 of 5 tests.</strong>
+	
+		
+			<p><a href="/problem/view/cs1/exams/finals/final13/Grasshopper">Go to the next problem: Grasshopper</a></p>
+		
+	
+
+
+
+	
+
+	
+
+	
+	
+		
+			
+			<div id="testresultsholder">
+				<div id="testresults">
+					
+					
+						
+						
+						<div class="testcase pass">
+							<div class="problemnumberandname testresultrow">
+								<span class="probleminfoheading" style=""><span class="problemnumber">test #1:</span></span>
+								<span class="problemname"><span>test1</span></span>
+							</div>
+							
+							
+							
+
+							
+								
+								
+									<div class="testresultrow">
+										<span class="probleminfoheading">console output:</span>
+										<span class="problemactual problemoutput"></span>
+									</div>
+								
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+
+							
+							
+							
+								<div class="problemresult">
+									
+									<span class="probleminfoheading">result:</span>
+									<i class="fa fa-check-circle-o pass-icon"></i>
+									pass
+								</div>
+							
+							
+							
+						</div>
+					
+						
+						
+						<div class="testcase pass">
+							<div class="problemnumberandname testresultrow">
+								<span class="probleminfoheading" style=""><span class="problemnumber">test #2:</span></span>
+								<span class="problemname"><span>test2</span></span>
+							</div>
+							
+							
+							
+
+							
+								
+								
+									<div class="testresultrow">
+										<span class="probleminfoheading">console output:</span>
+										<span class="problemactual problemoutput"></span>
+									</div>
+								
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+
+							
+							
+							
+								<div class="problemresult">
+									
+									<span class="probleminfoheading">result:</span>
+									<i class="fa fa-check-circle-o pass-icon"></i>
+									pass
+								</div>
+							
+							
+							
+						</div>
+					
+						
+						
+						<div class="testcase pass">
+							<div class="problemnumberandname testresultrow">
+								<span class="probleminfoheading" style=""><span class="problemnumber">test #3:</span></span>
+								<span class="problemname"><span>test3</span></span>
+							</div>
+							
+							
+							
+
+							
+								
+								
+									<div class="testresultrow">
+										<span class="probleminfoheading">console output:</span>
+										<span class="problemactual problemoutput"></span>
+									</div>
+								
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+
+							
+							
+							
+								<div class="problemresult">
+									
+									<span class="probleminfoheading">result:</span>
+									<i class="fa fa-check-circle-o pass-icon"></i>
+									pass
+								</div>
+							
+							
+							
+						</div>
+					
+						
+						
+						<div class="testcase pass">
+							<div class="problemnumberandname testresultrow">
+								<span class="probleminfoheading" style=""><span class="problemnumber">test #4:</span></span>
+								<span class="problemname"><span>test4</span></span>
+							</div>
+							
+							
+							
+
+							
+								
+								
+									<div class="testresultrow">
+										<span class="probleminfoheading">console output:</span>
+										<span class="problemactual problemoutput"></span>
+									</div>
+								
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+
+							
+							
+							
+								<div class="problemresult">
+									
+									<span class="probleminfoheading">result:</span>
+									<i class="fa fa-check-circle-o pass-icon"></i>
+									pass
+								</div>
+							
+							
+							
+						</div>
+					
+						
+						
+						<div class="testcase pass">
+							<div class="problemnumberandname testresultrow">
+								<span class="probleminfoheading" style=""><span class="problemnumber">test #5:</span></span>
+								<span class="problemname"><span>test5</span></span>
+							</div>
+							
+							
+							
+
+							
+								
+								
+									<div class="testresultrow">
+										<span class="probleminfoheading">console output:</span>
+										<span class="problemactual problemoutput"></span>
+									</div>
+								
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+
+							
+							
+							
+								<div class="problemresult">
+									
+									<span class="probleminfoheading">result:</span>
+									<i class="fa fa-check-circle-o pass-icon"></i>
+									pass
+								</div>
+							
+							
+							
+						</div>
+					 
+				</div> 
+			</div>
+		 
+	 
+ 
+
+ 
+
+
+
+
+
+
+
+			</div>
+		</div>
+		<hr />
+	
+		<div class="timedquizproblem">
+			<div class="timedquizresultsarea">
+				<h3>
+					<a href="/problem/view/cs1/exams/finals/final13/Grasshopper"
+							title="Click here to re-open this problem to work on it again.">
+						
+						Grasshopper</a>
+					
+					
+						<a class="hidedescription buttonlink" title="show/hide description text">
+							<img src="/images/hide.gif" title="show/hide results" alt="show results" style="vertical-align: middle" />
+							Show/Hide</a>
+					
+				</h3>
+
+				<div class="studentsolution">
+					
+						<p style="overflow: hidden">
+							<span class="columnname">Submitted:</span>
+							2018/05/31 22:20:33 (UTC)
+						</p>
+					
+
+					
+
+					
+
+					
+						<p class="warning">
+							NOTE: You had already solved this problem prior to starting this quiz.
+						</p>
+					
+				</div>
+			</div>
+			
+			<div class="timedquizproblembody">
+				
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<p id="passcountmessage">
+		<span id="passcountmessagespan" class="passedall">
+			<i class="fa fa-check-circle-o pass-icon"></i>
+			<strong>You passed 3 of 3 tests.</strong>
+	
+		
+			<p><a href="/problem/view/cs1/exams/finals/final13/rewind">Go to the next problem: rewind</a></p>
+		
+	
+
+
+
+	
+
+	
+
+	
+	
+		
+			
+			<div id="testresultsholder">
+				<div id="testresults">
+					
+					
+						
+						
+						<div class="testcase pass">
+							<div class="problemnumberandname testresultrow">
+								<span class="probleminfoheading" style=""><span class="problemnumber">test #1:</span></span>
+								<span class="problemname"><span>constructor</span></span>
+							</div>
+							
+							
+							
+
+							
+								
+								
+									<div class="testresultrow">
+										<span class="probleminfoheading">console output:</span>
+										<span class="problemactual problemoutput"></span>
+									</div>
+								
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+
+							
+							
+							
+								<div class="problemresult">
+									
+									<span class="probleminfoheading">result:</span>
+									<i class="fa fa-check-circle-o pass-icon"></i>
+									pass
+								</div>
+							
+							
+							
+						</div>
+					
+						
+						
+						<div class="testcase pass">
+							<div class="problemnumberandname testresultrow">
+								<span class="probleminfoheading" style=""><span class="problemnumber">test #2:</span></span>
+								<span class="problemname"><span>getMove&nbsp;attempt&nbsp;(without&nbsp;fighting)</span></span>
+							</div>
+							
+							
+							
+
+							
+								
+								
+									<div class="testresultrow">
+										<span class="probleminfoheading">console output:</span>
+										<span class="problemactual problemoutput"></span>
+									</div>
+								
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+
+							
+							
+							
+								<div class="problemresult">
+									
+									<span class="probleminfoheading">result:</span>
+									<i class="fa fa-check-circle-o pass-icon"></i>
+									pass
+								</div>
+							
+							
+							
+						</div>
+					
+						
+						
+						<div class="testcase pass">
+							<div class="problemnumberandname testresultrow">
+								<span class="probleminfoheading" style=""><span class="problemnumber">test #3:</span></span>
+								<span class="problemname"><span>getMove&nbsp;with&nbsp;fighting</span></span>
+							</div>
+							
+							
+							
+
+							
+								
+								
+									<div class="testresultrow">
+										<span class="probleminfoheading">console output:</span>
+										<span class="problemactual problemoutput"></span>
+									</div>
+								
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+
+							
+							
+							
+								<div class="problemresult">
+									
+									<span class="probleminfoheading">result:</span>
+									<i class="fa fa-check-circle-o pass-icon"></i>
+									pass
+								</div>
+							
+							
+							
+						</div>
+					 
+				</div> 
+			</div>
+		 
+	 
+ 
+
+ 
+
+
+
+
+
+
+
+			</div>
+		</div>
+		<hr />
+	
+		<div class="timedquizproblem">
+			<div class="timedquizresultsarea">
+				<h3>
+					<a href="/problem/view/cs1/exams/finals/final13/rewind"
+							title="Click here to re-open this problem to work on it again.">
+						
+						rewind</a>
+					
+					
+						<a class="hidedescription buttonlink" title="show/hide description text">
+							<img src="/images/hide.gif" title="show/hide results" alt="show results" style="vertical-align: middle" />
+							Show/Hide</a>
+					
+				</h3>
+
+				<div class="studentsolution">
+					
+						<p style="overflow: hidden">
+							<span class="columnname">Submitted:</span>
+							2018/05/31 22:35:05 (UTC)
+						</p>
+					
+
+					
+
+					
+
+					
+						<p class="warning">
+							NOTE: You had already solved this problem prior to starting this quiz.
+						</p>
+					
+				</div>
+			</div>
+			
+			<div class="timedquizproblembody">
+				
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<p id="passcountmessage">
+		<span id="passcountmessagespan" class="passedall">
+			<i class="fa fa-check-circle-o pass-icon"></i>
+			<strong>You passed 12 of 12 tests.</strong>
+	
+		
+	
+
+
+
+	
+
+	
+
+	
+	
+		
+			
+			<div id="testresultsholder">
+				<div id="testresults">
+					
+					
+						
+						
+						<div class="testcase pass">
+							<div class="problemnumberandname testresultrow">
+								<span class="probleminfoheading" style=""><span class="problemnumber">test #1:</span></span>
+								<span class="problemname"><span>test1</span></span>
+							</div>
+							
+							
+							
+
+							
+								
+								
+									<div class="testresultrow">
+										<span class="probleminfoheading">console output:</span>
+										<span class="problemactual problemoutput"></span>
+									</div>
+								
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+
+							
+							
+							
+								<div class="problemresult">
+									
+									<span class="probleminfoheading">result:</span>
+									<i class="fa fa-check-circle-o pass-icon"></i>
+									pass
+								</div>
+							
+							
+							
+						</div>
+					
+						
+						
+						<div class="testcase pass">
+							<div class="problemnumberandname testresultrow">
+								<span class="probleminfoheading" style=""><span class="problemnumber">test #2:</span></span>
+								<span class="problemname"><span>test2</span></span>
+							</div>
+							
+							
+							
+
+							
+								
+								
+									<div class="testresultrow">
+										<span class="probleminfoheading">console output:</span>
+										<span class="problemactual problemoutput"></span>
+									</div>
+								
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+
+							
+							
+							
+								<div class="problemresult">
+									
+									<span class="probleminfoheading">result:</span>
+									<i class="fa fa-check-circle-o pass-icon"></i>
+									pass
+								</div>
+							
+							
+							
+						</div>
+					
+						
+						
+						<div class="testcase pass">
+							<div class="problemnumberandname testresultrow">
+								<span class="probleminfoheading" style=""><span class="problemnumber">test #3:</span></span>
+								<span class="problemname"><span>test3</span></span>
+							</div>
+							
+							
+							
+
+							
+								
+								
+									<div class="testresultrow">
+										<span class="probleminfoheading">console output:</span>
+										<span class="problemactual problemoutput"></span>
+									</div>
+								
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+
+							
+							
+							
+								<div class="problemresult">
+									
+									<span class="probleminfoheading">result:</span>
+									<i class="fa fa-check-circle-o pass-icon"></i>
+									pass
+								</div>
+							
+							
+							
+						</div>
+					
+						
+						
+						<div class="testcase pass">
+							<div class="problemnumberandname testresultrow">
+								<span class="probleminfoheading" style=""><span class="problemnumber">test #4:</span></span>
+								<span class="problemname"><span>test4</span></span>
+							</div>
+							
+							
+							
+
+							
+								
+								
+									<div class="testresultrow">
+										<span class="probleminfoheading">console output:</span>
+										<span class="problemactual problemoutput"></span>
+									</div>
+								
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+
+							
+							
+							
+								<div class="problemresult">
+									
+									<span class="probleminfoheading">result:</span>
+									<i class="fa fa-check-circle-o pass-icon"></i>
+									pass
+								</div>
+							
+							
+							
+						</div>
+					
+						
+						
+						<div class="testcase pass">
+							<div class="problemnumberandname testresultrow">
+								<span class="probleminfoheading" style=""><span class="problemnumber">test #5:</span></span>
+								<span class="problemname"><span>test5</span></span>
+							</div>
+							
+							
+							
+
+							
+								
+								
+									<div class="testresultrow">
+										<span class="probleminfoheading">console output:</span>
+										<span class="problemactual problemoutput"></span>
+									</div>
+								
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+
+							
+							
+							
+								<div class="problemresult">
+									
+									<span class="probleminfoheading">result:</span>
+									<i class="fa fa-check-circle-o pass-icon"></i>
+									pass
+								</div>
+							
+							
+							
+						</div>
+					
+						
+						
+						<div class="testcase pass">
+							<div class="problemnumberandname testresultrow">
+								<span class="probleminfoheading" style=""><span class="problemnumber">test #6:</span></span>
+								<span class="problemname"><span>test6</span></span>
+							</div>
+							
+							
+							
+
+							
+								
+								
+									<div class="testresultrow">
+										<span class="probleminfoheading">console output:</span>
+										<span class="problemactual problemoutput"></span>
+									</div>
+								
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+
+							
+							
+							
+								<div class="problemresult">
+									
+									<span class="probleminfoheading">result:</span>
+									<i class="fa fa-check-circle-o pass-icon"></i>
+									pass
+								</div>
+							
+							
+							
+						</div>
+					
+						
+						
+						<div class="testcase pass">
+							<div class="problemnumberandname testresultrow">
+								<span class="probleminfoheading" style=""><span class="problemnumber">test #7:</span></span>
+								<span class="problemname"><span>test7</span></span>
+							</div>
+							
+							
+							
+
+							
+								
+								
+									<div class="testresultrow">
+										<span class="probleminfoheading">console output:</span>
+										<span class="problemactual problemoutput"></span>
+									</div>
+								
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+
+							
+							
+							
+								<div class="problemresult">
+									
+									<span class="probleminfoheading">result:</span>
+									<i class="fa fa-check-circle-o pass-icon"></i>
+									pass
+								</div>
+							
+							
+							
+						</div>
+					
+						
+						
+						<div class="testcase pass">
+							<div class="problemnumberandname testresultrow">
+								<span class="probleminfoheading" style=""><span class="problemnumber">test #8:</span></span>
+								<span class="problemname"><span>test8</span></span>
+							</div>
+							
+							
+							
+
+							
+								
+								
+									<div class="testresultrow">
+										<span class="probleminfoheading">console output:</span>
+										<span class="problemactual problemoutput"></span>
+									</div>
+								
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+
+							
+							
+							
+								<div class="problemresult">
+									
+									<span class="probleminfoheading">result:</span>
+									<i class="fa fa-check-circle-o pass-icon"></i>
+									pass
+								</div>
+							
+							
+							
+						</div>
+					
+						
+						
+						<div class="testcase pass">
+							<div class="problemnumberandname testresultrow">
+								<span class="probleminfoheading" style=""><span class="problemnumber">test #9:</span></span>
+								<span class="problemname"><span>test9</span></span>
+							</div>
+							
+							
+							
+
+							
+								
+								
+									<div class="testresultrow">
+										<span class="probleminfoheading">console output:</span>
+										<span class="problemactual problemoutput"></span>
+									</div>
+								
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+
+							
+							
+							
+								<div class="problemresult">
+									
+									<span class="probleminfoheading">result:</span>
+									<i class="fa fa-check-circle-o pass-icon"></i>
+									pass
+								</div>
+							
+							
+							
+						</div>
+					
+						
+						
+						<div class="testcase pass">
+							<div class="problemnumberandname testresultrow">
+								<span class="probleminfoheading" style=""><span class="problemnumber">test #10:</span></span>
+								<span class="problemname"><span>test10</span></span>
+							</div>
+							
+							
+							
+
+							
+								
+								
+									<div class="testresultrow">
+										<span class="probleminfoheading">console output:</span>
+										<span class="problemactual problemoutput"></span>
+									</div>
+								
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+
+							
+							
+							
+								<div class="problemresult">
+									
+									<span class="probleminfoheading">result:</span>
+									<i class="fa fa-check-circle-o pass-icon"></i>
+									pass
+								</div>
+							
+							
+							
+						</div>
+					
+						
+						
+						<div class="testcase pass">
+							<div class="problemnumberandname testresultrow">
+								<span class="probleminfoheading" style=""><span class="problemnumber">test #11:</span></span>
+								<span class="problemname"><span>test11</span></span>
+							</div>
+							
+							
+							
+
+							
+								
+								
+									<div class="testresultrow">
+										<span class="probleminfoheading">console output:</span>
+										<span class="problemactual problemoutput"></span>
+									</div>
+								
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+
+							
+							
+							
+								<div class="problemresult">
+									
+									<span class="probleminfoheading">result:</span>
+									<i class="fa fa-check-circle-o pass-icon"></i>
+									pass
+								</div>
+							
+							
+							
+						</div>
+					
+						
+						
+						<div class="testcase pass">
+							<div class="problemnumberandname testresultrow">
+								<span class="probleminfoheading" style=""><span class="problemnumber">test #12:</span></span>
+								<span class="problemname"><span>test12</span></span>
+							</div>
+							
+							
+							
+
+							
+								
+								
+									<div class="testresultrow">
+										<span class="probleminfoheading">console output:</span>
+										<span class="problemactual problemoutput"></span>
+									</div>
+								
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+
+							
+							
+							
+								<div class="problemresult">
+									
+									<span class="probleminfoheading">result:</span>
+									<i class="fa fa-check-circle-o pass-icon"></i>
+									pass
+								</div>
+							
+							
+							
+						</div>
+					 
+				</div> 
+			</div>
+		 
+	 
+ 
+
+ 
+
+
+
+
+
+
+
+			</div>
+		</div>
+		<hr />
+	
+</div>
+
+<script src="/js/timedquiz-results.js" type="text/javascript"></script>
+ 

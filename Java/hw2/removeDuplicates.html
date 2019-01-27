@@ -1,0 +1,530 @@
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+window.__csbsClientState = 
+{"checkjobstatusurl":"/test/check-job-status","commentender":"","commentstarter":"//"};
+</script>
+<!DOCTYPE html>
+<html>
+<!-- This file and all linked documents are, unless otherwise specified, authored by Marty Stepp, and may not be copied, redistributed, or modified without his permission. -->
+	<head>
+		<meta charset="utf-8" />
+		<meta name="description" content="Practice-It is an online practice problem tool to help students in college and high school intro programming courses learn and practice basic CS1 and CS2 programming concepts." />
+		<meta name="keywords" content="code step by step, CodeStepByStep, Java, C++, Python, practice, code, programming, CS1, CS2, back to basics, procedural programming, objects late, marty stepp, DrawingPanel, college, university" />
+		<meta name="HandheldFriendly" content="true" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+		<meta http-equiv="Cache-Control" content="no-cache" />
+		<meta http-equiv="Pragma" content="no-cache" />
+		<meta http-equiv="Expires" content="0" />
+
+		<title>removeDuplicates - Solve a Problem - Practice-It</title>
+
+		
+		<link href="/css/style.css" type="text/css" rel="stylesheet" />
+		<link href="/css/mobile.css" type="text/css" rel="stylesheet" media="handheld, only screen" />
+		
+		<link href="/css/pit.css" type="text/css" rel="stylesheet" />
+		<link href="/css/pit-mobile.css" type="text/css" rel="stylesheet" media="handheld, only screen" />
+
+		<link href="/css/font-awesome.css" type="text/css" rel="stylesheet" />
+		<link href="/css/font-mfizz.css" type="text/css" rel="stylesheet" />
+		<link href="/css/jquery-ui.min.css" type="text/css" rel="stylesheet" />
+		<link href="/images/favicon.gif" type="image/gif" rel="shortcut icon" />
+
+		<script src="/js/jQuery/jquery-2.2.3.min.js" type="text/javascript"></script>
+		<script src="/js/jQuery/jquery-ui.min.js" type="text/javascript"></script>
+		<script src="/js/jQuery/jquery.form.min.js" type="text/javascript"></script>
+		<script src="/js/jQuery/jquery.ion.sound.min.js" type="text/javascript"></script>
+
+		
+			<script src="/js/advertisement.js" type="text/javascript"></script>
+		
+		<script src="/js/common.js" type="text/javascript"></script>
+
+		
+			
+			<script>
+				(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+							(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+						m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+				})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+				ga('create', 'UA-78231907-2', 'auto');
+				ga('send', 'pageview');
+			</script>
+		
+	</head>
+
+	<body>
+		<header>
+			
+			
+
+			
+
+			<div class="maincontentarea overalllayoutalignblock">
+				
+				<a class="root-link" href="/">
+					<h1 class="overalllayoutaligntext">
+						<img src="/images/app-cartoony-logo-h60.png" class="logoimage" alt="logo" />
+						<span>Practice-It</span>
+						<img src="/images/app-cartoony-logo-h60.png" class="logoimage" alt="logo" />
+					</h1>
+				</a>
+			</div>
+		</header>
+
+		
+		<div id="foldermetadata" style="display: none;">
+			<div id="CSS_FOLDER">/css/</div>
+			<div id="IMAGES_FOLDER">/images/</div>
+			<div id="JS_FOLDER">/js/</div>
+			<div id="SOUNDS_FOLDER">/sounds/</div>
+		</div>
+
+		<div id="topmessagesarea" class="overalllayoutalignblock">
+			<noscript>
+				<p class="error">
+					This site requires JavaScript.
+					It looks like you have disabled JavaScript in your browser or are using a browser that does not support JavaScript.
+					Please enable it or try another browser.
+				</p>
+			</noscript>
+
+			<div id="adblockoverlay" style="display: none;">
+				<h2>Ad Blocker Detected</h2>
+
+				<p>
+					You must disable your ad-blocking software for our web site in your browser to use this site.
+					You don't have to turn off the ad blocker entirely; just disable ad blocking for <strong>codestepbystep.com</strong>, then refresh this page to continue.
+				</p>
+
+				<p>
+					It is easy to disable a tool like AdBlock for just one site while leaving it enabled for other sites.
+					Just click the "<strong>stop sign</strong>" icon in the top-right of your browser, then un-check the "<strong>Enabled for this site</strong>" checkbox.
+					If your UI doesn't match the screenshot below, you may want to Google for how to add a "whitelisted domain" to your ad blocker to allow ads from <strong>codestepbystep.com</strong> to be shown.
+				</p>
+
+				<p>
+					<img src="/images/adblock-disable.png" alt="AdBlock disable screenshot" />
+				</p>
+
+				<p>
+					Thank you for your understanding and helping us to keep this service free of cost for all students to use.
+				</p>
+
+				<p style="margin-top: 3em">
+					<em>Note:</em> If you are seeing this message but aren't running an ad blocker or have disabled your ad blocker:
+				</p>
+				
+				<ul style="text-align: left">
+					<li>Try clearing your browser history and refreshing the page.
+					<li>Make sure you don't have any other ad-blocking software running outside of your browser, such as a HOSTS file or proxy.
+					<li>If you are using a school computer network:
+						Many high schools have "proxy" software that blocks ads at the entire school level.
+						Your school's system administrator may need to add an exception for codestepbystep.com to allow these ads to get through.
+						You may need to copy/paste this information to your school's network administrator so that he/she can make appropriate changes to your network settings.
+				</ul>
+
+				<p style="margin-top: 2em">
+					If you have questions or need any other assistance,
+					please <a href="/contact-us">Contact Us</a>.
+				</p>
+			</div>
+
+			
+		</div>
+
+		
+		
+			<div id="noad" style="display: none;"></div>
+		
+
+		<div id="mainbodyarea" class="overalllayoutalignblock">
+			<div id="loading" style="display: none">
+				<i class="fa fa-2x fa-spinner fa-spin"></i>
+				Loading...
+			</div>
+
+			<div id="mainbodyareabody" class="overalllayoutalignblock">
+				
+
+
+
+
+
+
+	
+
+	<div class="problemnavigation">
+		
+			<div id="previouslink">
+				<a href="/problem/view/cs2/exams/finals/final4/HistoryList" title="Go to previous problem">
+				&lt; HistoryList</a>
+			</div>
+		
+
+		
+			<div id="nextlink">
+				<a href="/problem/view/cs2/exams/finals/final4/binarySearch" title="Go to next problem">
+					binarySearch &gt;</a>
+			</div>
+		
+	</div>
+
+	<div id="problemarea" class="codeproblem">
+		<h2 class="breadcrumbs overalllayoutaligntext">
+			<a href="/">Main Page</a>
+			&rarr;
+			
+				<a href="/problem/list">Problems</a>
+			
+			&rarr;
+			<span class="currentpagecrumb">Solve a Problem</span>
+		</h2>
+
+		<div style="float: right; margin-left: 1em;">
+			<a id="hidedescription" class="buttonlink" title="show/hide description text" style="display: none">
+				<img src="/images/hide.gif" alt="hide description" title="show/hide description text" />
+				Show/Hide Description</a>
+
+			<span id="cheatarea">
+				
+
+				
+
+				
+
+				<img id="solutionloading" src="/images/loading.gif"
+						style="visibility: hidden; vertical-align: baseline"
+						width="10"
+						height="10"
+						alt="loading" />
+			</span>
+		</div>
+
+
+		<h2 class="problemtitle" title="problem ID #989">
+			
+
+			 removeDuplicates
+
+			
+			
+		</h2>
+
+		
+
+		<div class="predescriptionrowcontainer">
+			
+				<div id="languagearea" class="predescriptionrow">
+					<span class="statuslabel">Language/Type:</span>
+					<i class="icon-java-bold"></i>
+					<span id="language">Java</span>
+
+					
+						
+							<a href="/problem/search?keyword=implementing"
+								title="click here to see all problems that match this keyword">implementing</a>
+						
+							<a href="/problem/search?keyword=Linked+Lists"
+								title="click here to see all problems that match this keyword">Linked Lists</a>
+						
+							<a href="/problem/search?keyword=LinkedIntList"
+								title="click here to see all problems that match this keyword">LinkedIntList</a>
+						
+					
+				</div>
+			
+
+			
+				<div id="relatedfiles" class="predescriptionrow">
+					<span class="statuslabel">Related Links:</span>
+					<div style="display: inline-block">
+						
+							<div>
+								<a class="popuplink" href="/problems/shared/LinkedIntList.java">LinkedIntList.java</a>
+							</div>
+						
+					</div>
+				</div>
+			
+
+			
+				<div id="author" class="predescriptionrow">
+					<span class="statuslabel">Author:</span>
+					Robert Baxter
+					
+				</div>
+			
+		</div>
+
+		
+
+		<div class="tidyfieldsetborder">
+			<fieldset style="border-color: transparent;">
+				<!-- <legend>Description:</legend> -->
+				<div id="description" style="display: block">
+					<p>Write a method <code class="methodname">removeDuplicates</code> that could be added to the <code>LinkedIntList</code> class from lecture and section. The method should remove any duplicates from the linked list of integers. The resulting list should have the values in the same relative order as their first occurrence in the original list. In other words, a value <code><em>i</code></em> should appear before a value <code><em>j</code></em> in the final list if and only if the first occurence of <code><em>i</code></em> appeared before the first occurrence of <code><em>j</code></em> in the original list. For example, if a variable called <code>list</code> stores the following list:</p>
+
+<pre>
+[14, 8, <u>14</u>, 12, 1, <u>14</u>, 11, <u>8</u>, <u>8</u>, 10, 4, 9, <u>1</u>, 2, 5, <u>2</u>, <u>4</u>, <u>12</u>, <u>12</u>]
+</pre>
+
+        <p>After the call of <code>list.removeDuplicates();</code>, the list should store these values:</p>
+
+<pre>
+[14, 8, 12, 1, 11, 10, 4, 9, 2, 5]
+</pre>
+
+        <p>Assume that we are adding this method to the <code>LinkedIntList</code> class as seen in lecture and as shown below. You may not call any other methods of the class to solve this problem, you may not construct any new nodes, and you may not use any auxiliary data structures to solve this problem (such as an array, <code>ArrayList</code>, <code>Queue</code>, <code>String</code>, etc.). You also may not change any <code>data</code> fields of the nodes. You <u>must</u> solve this problem by rearranging the links of the list.</p>
+
+<pre>
+    public class LinkedIntList {
+        private ListNode front;
+        ...
+    }
+    
+    public class ListNode {
+        public int data;
+        public ListNode next;
+        ...
+    }
+</pre>
+				</div><!-- end of description -->
+			</fieldset>
+
+			
+		</div>
+
+		<div id="solutionarea">
+			
+				<form id="solutionform" action="/test/enqueue-job" method="post">
+					<div>
+						<input type="hidden" name="problemid" class="problemid" value="989" />
+						<input type="hidden" name="cheated" value="0" id="cheated" />
+					</div>
+	
+					
+						
+	
+						<div id="showmetheheaderarea" style="display: none;">public void removeDuplicates() {
+	
+}</div>
+	
+						<div id="solutioncontainerdiv">
+							<fieldset>
+								<legend>Type your solution here:</legend>
+								<textarea id="solution" name="solution"
+										rows="14"
+										wrap="off"
+										autocomplete="off"
+										autocapitalize="off"
+										autofocus="autofocus"
+										style="min-width: 94%"
+										placeholder="solution code goes here"
+										disabled="disabled"></textarea>
+							</fieldset>
+						</div>
+					
+	
+					
+					<div id="undersolutionarea">
+						<div id="controlsarea">
+							<div id="indentarea">
+								
+									<div style="padding-bottom: 0.5em;">
+										<a id="indent" class="buttonlink buttonlinksmall" title="Automatically re-indent your code" style="padding-top: 2px; padding-bottom: 2px;">
+											<i class="fa fa-indent"></i></a>
+										<label style="display: none">
+											<input type="radio" id="indentspaces" name="indenttype" value="spaces" checked="checked" />
+											Spaces
+										</label>
+										<label>
+											<input type="text" id="indentspacecount" size="2" maxlength="1" value="4" style="text-align: center"
+													title="Number of spaces in each increment of indentation, such as when you press the Tab key" />
+											Indent
+										</label>
+										<br />
+										<label style="display: none">
+											<input type="radio" id="indenttabs" name="indenttype" value="tabs" />
+											Tabs
+										</label>
+									</div>
+	
+									<div style="line-height: 18pt">
+									</div>
+								
+	
+								<div id="sliderarea" style="display: none"></div>
+							</div>
+	
+							<div id="soundarea">
+								
+									<label>
+										<input id="sound" type="checkbox" checked="checked" />
+										Sound F/X
+									</label>
+								
+								
+									<span class="syntaxhighlightingarea">
+									<br />
+									<label>
+										<input id="syntaxhighlighting" type="checkbox" checked="checked" />
+										Highlighting
+									</label>
+									</span>
+								
+							</div>
+		
+						</div>
+		
+						
+							<div id="problemtypeclarification">
+								
+									This is a <strong>partial class problem.</strong>
+									Submit code that will become part of an existing Java class as described.
+									You do <u>not</u> need to write the complete class, just the portion described in the problem.
+								
+							</div>
+		
+						
+		
+						
+							<div class="overalllayoutalignblock overalllayoutaligntext" style="margin-top: 3em;">
+								<p>
+									<em>You must log in before you can solve this problem.</em>
+								</p>
+		
+								<table id="mainoptions" class="overalllayoutalignblock">
+									<tr>
+										<td>
+											<a href="/login?after=%2Fproblem%2Fview%2Fcs2%2Fexams%2Ffinals%2Ffinal4%2FremoveDuplicates">
+												<i class="fa fa-2x fa-user"></i> <br />
+												<span>Log In</span>
+											</a>
+										</td>
+									</tr>
+								</table>
+							</div>
+						
+					</form><!-- end solutionform -->
+				
+	
+				<div id="htmldiff">
+					<div id="htmlexpectedoutput" style="opacity: 0.0"></div>
+					<div id="htmlactualoutput"></div>
+				</div>
+			</div>
+		</div><!-- solutionarea -->
+
+		<div id="loadingarea" style="display: none">
+			<p>
+				<em>Contacting server and running tests...</em>
+			</p>
+
+			<p>
+				<i class="fa fa-2x fa-spinner fa-spin"></i>
+			</p>
+		</div>
+	</div><!-- problemarea -->
+
+	
+	<div id="testresultsloadingarea" class="overalllayoutaligntext" style="display: none">
+		<div>
+			<p>
+				Contacting server and running tests ... <br />
+				<i class="fa fa-2x fa-spinner fa-spin"></i>
+			</p>
+
+			<div id="testresultscurrentstatus">
+				<p>
+					Current status: Sending data ...
+				</p>
+			</div>
+		</div>
+	</div>
+
+	
+	<div id="testresultsarea"></div>
+
+
+
+<div id="bottomarea">
+	<div class="helptips">
+		<p>
+			<form id="contactform" method="post" action="/contact-us">
+				If you do not understand how to solve a problem or why your solution doesn't work, please contact your TA or instructor. <br />
+				If something seems wrong with the site (errors, slow performance, incorrect problems/tests, etc.), please <input type="submit" value="contact us."/>
+				<textarea id="studentsolution" hidden name="studentsolution" value=""></textarea>
+				<input type="text" hidden name="problemname" value="removeDuplicates" />
+				<input type="text" hidden name="selfsubmitted" value="false" />
+				<input type="text" hidden id="problemurl" name="problemurl" value="" />
+			</form>
+		</p>
+	</div>
+</div>
+
+
+<div id="problemid" style="display: none">989</div>
+
+<link href="/css/codemirror/lib/codemirror.css" type="text/css" rel="stylesheet" />
+<link href="/css/codemirror/theme/codestepbystep.css" type="text/css" rel="stylesheet" />
+<script src="/js/codemirror/lib/codemirror.js" type="text/javascript"></script>
+<script src="/js/codemirror/mode/htmlmixed/htmlmixed.js" type="text/javascript"></script>
+<script src="/js/codemirror/mode/xml/xml.js" type="text/javascript"></script>
+<script src="/js/codemirror/mode/clike/clike.js" type="text/javascript"></script>
+<script src="/js/codemirror/mode/javascript/javascript.js" type="text/javascript"></script>
+<script src="/js/codemirror/mode/mllike/mllike.js" type="text/javascript"></script>
+<script src="/js/codemirror/mode/python/python.js" type="text/javascript"></script>
+<script src="/js/codemirror/mode/php/php.js" type="text/javascript"></script>
+<script src="/js/codemirror/mode/scheme/scheme.js" type="text/javascript"></script>
+<script src="/js/codemirror/mode/ruby/ruby.js" type="text/javascript"></script>
+<script src="/js/codemirror/addon/edit/matchbrackets.js" type="text/javascript"></script>
+
+<script src="/js/Cookies.js" type="text/javascript"></script>
+<script src="/js/indent.js" type="text/javascript"></script>
+<script src="/js/problem-view.js" type="text/javascript"></script>
+<script src="/js/binarytree.js" type="text/javascript"></script>
+
+
+
+
+
+
+<div class="hrule"></div>
+
+<div>
+	<p class="isthereaproblem overalllayoutaligntext">
+		Is there a problem?
+		<a target="_blank" href="/contact-us">Contact a site administrator</a>.
+	</p>
+</div>
+
+<div id="copyright">
+	Site name, logo, iconography, site design, web application and problems are original work and copyright &copy; Marty Stepp unless otherwise specified.
+	This site is the independent creation and intellectual property of the author and has no direct affiliation or association with any particular company, university, course, textbook, or any other material or online resource.
+	Any non-educational usage of the content on this site is expressly forbidden without written permission.
+	All rights reserved.
+</div>
+</div>  <!-- end mainbodyareabody -->
+</div>  <!-- end mainbodyarea -->
+
+<div id="dumparea"></div>
+
+
+
+	<div id="noad" style="display: none;"></div>
+
+</body>
+</html>
+
