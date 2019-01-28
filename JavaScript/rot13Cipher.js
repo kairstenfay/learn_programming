@@ -1,26 +1,20 @@
 /**
- * Returns a decoded rot13 cipher given a string.
+ * Returns a decoded Cesar's cipher given a string.
  *
  * @param str
  * @returns {string}
  */
 function rot13(str) { // LBH QVQ VG!
 
-    let arr = str.split(" ");
-    for (let i = 0; i < arr.length; i++)
-    {
-        let tempArr = arr[i].split("");
-        tempArr = tempArr.map(x => x.charCodeAt(0));
+    let arr = str.split("");
+    arr = arr.map(x => x.charCodeAt(0));
 
-        tempArr = tempArr.map(x => remapIfUnder65(x));
-        arr[i] = tempArr.join('');
-        console.log(arr[i]);
-    }
-    return arr.join(" ");
+    arr = arr.map(x => remapIfUnder65(x));
+    return arr.join("");
 }
 
 // Change the inputs below to test
-console.log(rot13("LBH QVQ VG"));
+console.log(rot13("LBH QVQ V!!!G"));
 
 
 /**
@@ -30,10 +24,12 @@ console.log(rot13("LBH QVQ VG"));
  * @returns {string}
  */
 function remapIfUnder65(x) {
-    x -= 13;
-    let diff = 65 - x;
-    if (diff > 0) {
-        x = 90 - (64 - x);
+    if (!String.fromCharCode(x).match(/\W|_/)) {
+        x -= 13;
+        let diff = 65 - x;
+        if (diff > 0) {
+            x = 90 - (64 - x);
+        }
     }
     return String.fromCharCode(x);
 }
